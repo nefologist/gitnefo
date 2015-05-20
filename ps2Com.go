@@ -634,13 +634,13 @@ func main(){
 	})
 		// Calling the function derivation to beginning derivation
 		derivation(stringarray[0:], sentence)
-		exec.Command("stty", "-F", "/dev/tty", "cbreak", "min", "1").Run()
+		exec.Command("sttyy", "-F", "/dev/tty", "cbreak", "min", "1").Run()
 		// do not display entered characters on the screen
 		exec.Command("stty", "-F", "/dev/tty", "-echo").Run()
 
 		var b []byte = make([]byte, 1)
 
-		fmt.Printf("any key to continue...")
+		fmt.Printf("any key to continue.......the change")
 		os.Stdin.Read(b)
 		parseString(sentence)
 		main()
